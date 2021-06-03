@@ -1,11 +1,13 @@
 package com.digite.kata.workflow;
 
-public class JuniorWorker implements Worker{
-
-    public void work() {
+public class JuniorWorker implements Worker, HumanInterface
+{
+    public String work() {
         // ....working
+       return "working";
     }
-    public void eat() {
-        // ...... eating in launch break
+    public String eat() {
+        // ...... eating in lunch break
+        return "eating in lunch break";
     }
 }
