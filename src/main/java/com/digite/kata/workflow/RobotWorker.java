@@ -2,11 +2,9 @@ package com.digite.kata.workflow;
 
 public class RobotWorker implements Worker{
 
-    public void work() {
+    public String work() {
         // ....working
+        return " BOT working";
     }
 
-    public void eat() {
-        throw new RuntimeException();
-    }
 }
