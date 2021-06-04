@@ -1,8 +1,5 @@
 package com.digite.kata.tracker;
 
-import com.digite.kata.tracker.Emailer;
-import com.digite.kata.tracker.Phone;
-
 public class WeatherTracker {
     String currentConditions;
     Phone phone;
@@ -13,15 +10,8 @@ public class WeatherTracker {
         emailer = new Emailer();
     }
 
-    public void setCurrentConditions(String weatherDescription) {
-        this.currentConditions = weatherDescription;
-        if (weatherDescription == "rainy") {
-            String alert = phone.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
-        if (weatherDescription == "sunny") {
-            String alert = emailer.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
+    public String setCurrentConditions(String weatherDescription, Notification a_notification) {
+    	String w_condition = a_notification.generateWeatherAlert(weatherDescription);
+    	return w_condition;
     }
 }
