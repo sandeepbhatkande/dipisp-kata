@@ -1,12 +1,12 @@
 package com.digite.kata.workflow;
 
-public class SuperWorker implements Worker{
+public class SuperWorker implements Worker, LivingBeing{
 
-    public void work() {
-        //.... working much more
+    public String work() {
+        return "SuperWork";
     }
 
-    public void eat() {
-        //.... eating in launch break
+    public String eat() {
+        return "SuperEat";
     }
 }
