@@ -2,13 +2,13 @@ package com.digite.kata.workflow;
 
 public class Manager {
 
-    Worker worker;
+    JuniorWorker m_juniorworker;
 
-    public void setWorker(Worker worker) {
-        this.worker=worker;
+    public void setWorker(JuniorWorker worker) {
+        this.m_juniorworker=worker;
     }
 
-    public void manage() {
-        worker.work();
+    public String manage() {
+    	return m_juniorworker.work();
     }
 }
