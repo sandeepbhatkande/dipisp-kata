@@ -5,23 +5,13 @@ import com.digite.kata.tracker.Phone;
 
 public class WeatherTracker {
     String currentConditions;
-    Phone phone;
-    Emailer emailer;
+    Notification m_notifier;
 
-    public WeatherTracker() {
-        phone = new Phone();
-        emailer = new Emailer();
+    public WeatherTracker(Notification a_notifier) {
+    	m_notifier = a_notifier;
     }
 
-    public void setCurrentConditions(String weatherDescription) {
-        this.currentConditions = weatherDescription;
-        if (weatherDescription == "rainy") {
-            String alert = phone.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
-        if (weatherDescription == "sunny") {
-            String alert = emailer.generateWeatherAlert(weatherDescription);
-            System.out.print(alert);
-        }
+    public String sendNotification(String a_weatherDescription) {
+        return m_notifier.generateWeatherAlert(a_weatherDescription);
     }
 }
